@@ -1,0 +1,6 @@
+framework module Pods_MHToolsEx {
+  umbrella header "Pods-MHToolsEx-umbrella.h"
+
+  export *
+  module * { export * }
+}

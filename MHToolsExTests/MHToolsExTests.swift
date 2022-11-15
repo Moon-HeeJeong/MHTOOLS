@@ -1,15 +1,14 @@
 //
-//  MHToolsTests.swift
-//  MHToolsTests
+//  MHToolsExTests.swift
+//  MHToolsExTests
 //
 //  Created by LittleFoxiOSDeveloper on 2022/11/15.
 //
 
 import XCTest
-@testable import MHTools
+@testable import MHToolsEx
 
-
-final class MHToolsTests: XCTestCase {
+final class MHToolsExTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
