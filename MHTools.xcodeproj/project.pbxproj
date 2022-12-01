@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F4619415F1BA44DE06EA4B7 /* Pods_MHToolsEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7679C530EA2EA769F9A73F2 /* Pods_MHToolsEx.framework */; };
 		2837B9C159B83FB0E8A4B451 /* Pods_MHTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99619B8549674E2FA101B70 /* Pods_MHTools.framework */; };
-		3BB0E4C0CB1C4100664B4B36 /* Pods_MHToolsEx_MHToolsExUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A86118E3772F433BE9C777 /* Pods_MHToolsEx_MHToolsExUITests.framework */; };
 		4416D3AFA3D5C2720B567EAF /* Pods_MHToolsExTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718E8D745556D7575D87E31E /* Pods_MHToolsExTests.framework */; };
-		4445DB56F9CF4895B489E1BF /* Pods_MHToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6D17C840443F933D64F00F /* Pods_MHToolsTests.framework */; };
+		4D197345EE4293E661BA8221 /* Pods_MHToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF996105D2C2F3BA1755664 /* Pods_MHToolsTests.framework */; };
 		D967D42529234E51004BF68F /* MHTools.docc in Sources */ = {isa = PBXBuildFile; fileRef = D967D42429234E51004BF68F /* MHTools.docc */; };
 		D967D42B29234E51004BF68F /* MHTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D967D42029234E51004BF68F /* MHTools.framework */; };
 		D967D43029234E52004BF68F /* MHToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D42F29234E52004BF68F /* MHToolsTests.swift */; };
@@ -23,13 +22,15 @@
 		D967D47829234F38004BF68F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D967D47729234F38004BF68F /* Assets.xcassets */; };
 		D967D47B29234F38004BF68F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D967D47929234F38004BF68F /* LaunchScreen.storyboard */; };
 		D967D48629234F38004BF68F /* MHToolsExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D48529234F38004BF68F /* MHToolsExTests.swift */; };
-		D967D49029234F39004BF68F /* MHToolsExUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D48F29234F39004BF68F /* MHToolsExUITests.swift */; };
-		D967D49229234F39004BF68F /* MHToolsExUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49129234F39004BF68F /* MHToolsExUITestsLaunchTests.swift */; };
 		D967D49E292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
 		D967D49F292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
 		D967D4A0292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
 		D967D4A1292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
-		D967D4A2292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
+		D98D94A82924A39400161388 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; fileRef = D967D4AD2923650E004BF68F /* Alamofire */; };
+		D98D94B22924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
+		D98D94B32924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
+		D98D94B42924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
+		D98D94B52924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +42,6 @@
 			remoteInfo = MHTools;
 		};
 		D967D48229234F38004BF68F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D967D41729234E51004BF68F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D967D46B29234F37004BF68F;
-			remoteInfo = MHToolsEx;
-		};
-		D967D48C29234F38004BF68F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D967D41729234E51004BF68F /* Project object */;
 			proxyType = 1;
@@ -68,26 +62,12 @@
 			remoteGlobalIDString = 649B61A5922B33613117FF7DFE63E252;
 			remoteInfo = "Pods-MHTools";
 		};
-		D967D4B02923650E004BF68F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D967D4A32923650E004BF68F /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AFCDC5F291BBFE3D509E8BD393EED994;
-			remoteInfo = "Pods-MHTools-MHToolsTests";
-		};
 		D967D4B22923650E004BF68F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D967D4A32923650E004BF68F /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 027E7354DD57C2BA5A3BD06EE1AF56D8;
 			remoteInfo = "Pods-MHToolsEx";
-		};
-		D967D4B42923650E004BF68F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D967D4A32923650E004BF68F /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE59A97BBC7D57D9481638A782F658ED;
-			remoteInfo = "Pods-MHToolsEx-MHToolsExUITests";
 		};
 		D967D4B62923650E004BF68F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -96,11 +76,19 @@
 			remoteGlobalIDString = A3DF74784ADD2A74BA6768D862B396DB;
 			remoteInfo = "Pods-MHToolsExTests";
 		};
+		D98D94A52924A06400161388 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D967D4A32923650E004BF68F /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 303BAC67B549BB0935FD73E7723CC52F;
+			remoteInfo = "Pods-MHToolsTests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0A4DE7689BE10510A521ADB8 /* Pods-MHToolsEx-MHToolsExUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsEx-MHToolsExUITests.debug.xcconfig"; path = "Target Support Files/Pods-MHToolsEx-MHToolsExUITests/Pods-MHToolsEx-MHToolsExUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		13AFA0CF281CE5DD13D6C287 /* Pods-MHToolsEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsEx.debug.xcconfig"; path = "Target Support Files/Pods-MHToolsEx/Pods-MHToolsEx.debug.xcconfig"; sourceTree = "<group>"; };
+		1FF996105D2C2F3BA1755664 /* Pods_MHToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		417401018031BAD207D0258B /* Pods-MHToolsEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsEx.release.xcconfig"; path = "Target Support Files/Pods-MHToolsEx/Pods-MHToolsEx.release.xcconfig"; sourceTree = "<group>"; };
 		4194AC45D995023DDCEFF8C8 /* Pods-MHToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsTests.release.xcconfig"; path = "Target Support Files/Pods-MHToolsTests/Pods-MHToolsTests.release.xcconfig"; sourceTree = "<group>"; };
 		469F4BA0CCE12AD2BAE772ED /* Pods-MHToolsEx-MHToolsExUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsEx-MHToolsExUITests.release.xcconfig"; path = "Target Support Files/Pods-MHToolsEx-MHToolsExUITests/Pods-MHToolsEx-MHToolsExUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,13 +116,10 @@
 		D967D47C29234F38004BF68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D967D48129234F38004BF68F /* MHToolsExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHToolsExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D967D48529234F38004BF68F /* MHToolsExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHToolsExTests.swift; sourceTree = "<group>"; };
-		D967D48B29234F38004BF68F /* MHToolsExUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHToolsExUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D967D48F29234F39004BF68F /* MHToolsExUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHToolsExUITests.swift; sourceTree = "<group>"; };
-		D967D49129234F39004BF68F /* MHToolsExUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHToolsExUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D967D49D292353A7004BF68F /* MHAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAPI.swift; sourceTree = "<group>"; };
 		D967D4A32923650E004BF68F /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D98D94B12924A74600161388 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		E4353E17BD8A88CA6DADEA03 /* Pods-MHToolsExTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsExTests.release.xcconfig"; path = "Target Support Files/Pods-MHToolsExTests/Pods-MHToolsExTests.release.xcconfig"; sourceTree = "<group>"; };
-		ED6D17C840443F933D64F00F /* Pods_MHToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7679C530EA2EA769F9A73F2 /* Pods_MHToolsEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHToolsEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -151,8 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98D94A82924A39400161388 /* Alamofire in Frameworks */,
 				D967D42B29234E51004BF68F /* MHTools.framework in Frameworks */,
-				4445DB56F9CF4895B489E1BF /* Pods_MHToolsTests.framework in Frameworks */,
+				4D197345EE4293E661BA8221 /* Pods_MHToolsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,14 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4416D3AFA3D5C2720B567EAF /* Pods_MHToolsExTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D967D48829234F38004BF68F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3BB0E4C0CB1C4100664B4B36 /* Pods_MHToolsEx_MHToolsExUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +187,7 @@
 				F7679C530EA2EA769F9A73F2 /* Pods_MHToolsEx.framework */,
 				B2A86118E3772F433BE9C777 /* Pods_MHToolsEx_MHToolsExUITests.framework */,
 				718E8D745556D7575D87E31E /* Pods_MHToolsExTests.framework */,
-				ED6D17C840443F933D64F00F /* Pods_MHToolsTests.framework */,
+				1FF996105D2C2F3BA1755664 /* Pods_MHToolsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,7 +200,6 @@
 				D967D42E29234E51004BF68F /* MHToolsTests */,
 				D967D46D29234F37004BF68F /* MHToolsEx */,
 				D967D48429234F38004BF68F /* MHToolsExTests */,
-				D967D48E29234F39004BF68F /* MHToolsExUITests */,
 				D967D42129234E51004BF68F /* Products */,
 				226595B8928E6B1FDD05A3FA /* Pods */,
 				58FFCF45C4BF85BEFD8196D7 /* Frameworks */,
@@ -236,7 +213,6 @@
 				D967D42A29234E51004BF68F /* MHToolsTests.xctest */,
 				D967D46C29234F37004BF68F /* MHToolsEx.app */,
 				D967D48129234F38004BF68F /* MHToolsExTests.xctest */,
-				D967D48B29234F38004BF68F /* MHToolsExUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +220,7 @@
 		D967D42229234E51004BF68F /* MHTools */ = {
 			isa = PBXGroup;
 			children = (
+				D98D94AB2924A72900161388 /* Sample */,
 				D967D49C29235294004BF68F /* MHAPI */,
 				D967D42329234E51004BF68F /* MHTools.h */,
 				D967D42429234E51004BF68F /* MHTools.docc */,
@@ -281,15 +258,6 @@
 			path = MHToolsExTests;
 			sourceTree = "<group>";
 		};
-		D967D48E29234F39004BF68F /* MHToolsExUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D967D48F29234F39004BF68F /* MHToolsExUITests.swift */,
-				D967D49129234F39004BF68F /* MHToolsExUITestsLaunchTests.swift */,
-			);
-			path = MHToolsExUITests;
-			sourceTree = "<group>";
-		};
 		D967D49C29235294004BF68F /* MHAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,12 +271,19 @@
 			children = (
 				D967D4AD2923650E004BF68F /* Alamofire */,
 				D967D4AF2923650E004BF68F /* Pods-MHTools */,
-				D967D4B12923650E004BF68F /* Pods-MHTools-MHToolsTests */,
 				D967D4B32923650E004BF68F /* Pods-MHToolsEx */,
-				D967D4B52923650E004BF68F /* Pods-MHToolsEx-MHToolsExUITests */,
 				D967D4B72923650E004BF68F /* Pods-MHToolsExTests */,
+				D98D94A62924A06400161388 /* Pods-MHToolsTests */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D98D94AB2924A72900161388 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				D98D94B12924A74600161388 /* Sample.swift */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +327,7 @@
 				D967D42629234E51004BF68F /* Sources */,
 				D967D42729234E51004BF68F /* Frameworks */,
 				D967D42829234E51004BF68F /* Resources */,
+				CBABF178B039F2B3E3589C63 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +366,7 @@
 				D967D47D29234F38004BF68F /* Sources */,
 				D967D47E29234F38004BF68F /* Frameworks */,
 				D967D47F29234F38004BF68F /* Resources */,
+				26EAEEE379AD6ABAF4892D34 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,26 +377,6 @@
 			productName = MHToolsExTests;
 			productReference = D967D48129234F38004BF68F /* MHToolsExTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D967D48A29234F38004BF68F /* MHToolsExUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D967D49929234F39004BF68F /* Build configuration list for PBXNativeTarget "MHToolsExUITests" */;
-			buildPhases = (
-				F1C779E8025668EEE3B10FFC /* [CP] Check Pods Manifest.lock */,
-				D967D48729234F38004BF68F /* Sources */,
-				D967D48829234F38004BF68F /* Frameworks */,
-				D967D48929234F38004BF68F /* Resources */,
-				42FD71BE188F86C3D11E6C8D /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D967D48D29234F38004BF68F /* PBXTargetDependency */,
-			);
-			name = MHToolsExUITests;
-			productName = MHToolsExUITests;
-			productReference = D967D48B29234F38004BF68F /* MHToolsExUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -441,10 +398,6 @@
 						CreatedOnToolsVersion = 14.0;
 					};
 					D967D48029234F38004BF68F = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = D967D46B29234F37004BF68F;
-					};
-					D967D48A29234F38004BF68F = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = D967D46B29234F37004BF68F;
 					};
@@ -473,7 +426,6 @@
 				D967D42929234E51004BF68F /* MHToolsTests */,
 				D967D46B29234F37004BF68F /* MHToolsEx */,
 				D967D48029234F38004BF68F /* MHToolsExTests */,
-				D967D48A29234F38004BF68F /* MHToolsExUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -495,14 +447,6 @@
 			remoteRef = D967D4AE2923650E004BF68F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D967D4B12923650E004BF68F /* Pods-MHTools-MHToolsTests */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-MHTools-MHToolsTests";
-			path = Pods_MHTools_MHToolsTests.framework;
-			remoteRef = D967D4B02923650E004BF68F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D967D4B32923650E004BF68F /* Pods-MHToolsEx */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -511,20 +455,20 @@
 			remoteRef = D967D4B22923650E004BF68F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D967D4B52923650E004BF68F /* Pods-MHToolsEx-MHToolsExUITests */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = "Pods-MHToolsEx-MHToolsExUITests";
-			path = Pods_MHToolsEx_MHToolsExUITests.framework;
-			remoteRef = D967D4B42923650E004BF68F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		D967D4B72923650E004BF68F /* Pods-MHToolsExTests */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			name = "Pods-MHToolsExTests";
 			path = Pods_MHToolsExTests.framework;
 			remoteRef = D967D4B62923650E004BF68F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D98D94A62924A06400161388 /* Pods-MHToolsTests */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "Pods-MHToolsTests";
+			path = Pods_MHToolsTests.framework;
+			remoteRef = D98D94A52924A06400161388 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -561,13 +505,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D967D48929234F38004BF68F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -593,6 +530,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		26EAEEE379AD6ABAF4892D34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MHToolsExTests/Pods-MHToolsExTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MHToolsExTests/Pods-MHToolsExTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MHToolsExTests/Pods-MHToolsExTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2F6E1610825EC2DF13D86BA0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -613,23 +567,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42FD71BE188F86C3D11E6C8D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MHToolsEx-MHToolsExUITests/Pods-MHToolsEx-MHToolsExUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MHToolsEx-MHToolsExUITests/Pods-MHToolsEx-MHToolsExUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MHToolsEx-MHToolsExUITests/Pods-MHToolsEx-MHToolsExUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71530AF5561C5E33EDC39827 /* [CP] Check Pods Manifest.lock */ = {
@@ -693,26 +630,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MHToolsEx/Pods-MHToolsEx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1C779E8025668EEE3B10FFC /* [CP] Check Pods Manifest.lock */ = {
+		CBABF178B039F2B3E3589C63 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MHToolsTests/Pods-MHToolsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MHToolsEx-MHToolsExUITests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-MHToolsTests/Pods-MHToolsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MHToolsTests/Pods-MHToolsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -723,6 +655,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D967D42529234E51004BF68F /* MHTools.docc in Sources */,
+				D98D94B22924A74600161388 /* Sample.swift in Sources */,
 				D967D49E292353A7004BF68F /* MHAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D967D43029234E52004BF68F /* MHToolsTests.swift in Sources */,
+				D98D94B32924A74600161388 /* Sample.swift in Sources */,
 				D967D49F292353A7004BF68F /* MHAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98D94B42924A74600161388 /* Sample.swift in Sources */,
 				D967D47329234F37004BF68F /* ViewController.swift in Sources */,
 				D967D4A0292353A7004BF68F /* MHAPI.swift in Sources */,
 				D967D46F29234F37004BF68F /* AppDelegate.swift in Sources */,
@@ -752,17 +687,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D967D48629234F38004BF68F /* MHToolsExTests.swift in Sources */,
+				D98D94B52924A74600161388 /* Sample.swift in Sources */,
 				D967D4A1292353A7004BF68F /* MHAPI.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D967D48729234F38004BF68F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D967D49229234F39004BF68F /* MHToolsExUITestsLaunchTests.swift in Sources */,
-				D967D49029234F39004BF68F /* MHToolsExUITests.swift in Sources */,
-				D967D4A2292353A7004BF68F /* MHAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,11 +704,6 @@
 			isa = PBXTargetDependency;
 			target = D967D46B29234F37004BF68F /* MHToolsEx */;
 			targetProxy = D967D48229234F38004BF68F /* PBXContainerItemProxy */;
-		};
-		D967D48D29234F38004BF68F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D967D46B29234F37004BF68F /* MHToolsEx */;
-			targetProxy = D967D48C29234F38004BF68F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1122,44 +1043,6 @@
 			};
 			name = Release;
 		};
-		D967D49A29234F39004BF68F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A4DE7689BE10510A521ADB8 /* Pods-MHToolsEx-MHToolsExUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SL6Z6PSCF7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mh.tools.MHToolsExUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MHToolsEx;
-			};
-			name = Debug;
-		};
-		D967D49B29234F39004BF68F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 469F4BA0CCE12AD2BAE772ED /* Pods-MHToolsEx-MHToolsExUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SL6Z6PSCF7;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mh.tools.MHToolsExUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MHToolsEx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1204,15 +1087,6 @@
 			buildConfigurations = (
 				D967D49729234F39004BF68F /* Debug */,
 				D967D49829234F39004BF68F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D967D49929234F39004BF68F /* Build configuration list for PBXNativeTarget "MHToolsExUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D967D49A29234F39004BF68F /* Debug */,
-				D967D49B29234F39004BF68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

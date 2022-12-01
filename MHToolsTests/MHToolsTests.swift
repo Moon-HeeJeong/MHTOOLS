@@ -10,28 +10,28 @@ import XCTest
 
 
 final class MHToolsTests: XCTestCase {
+    
+    var api: APITest?
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.api = APITest()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.api = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testAPI() throws{
+        let exception = self.expectation(description: "test api call")
+        
+        self.api?.call(api: VersionAPI(deviceID: "7a16fd01-06a7-4395-bab0-30339d886541", pushID: "1dcf0c21fb5f7891f73eaba0266e87ac3871884ae6fc3456e4580007fbad8427", isPushOn: nil, config: APIConfig()), completed: { res in
+            print("res ::\(res)")
+            
+            XCTAssertNotNil(res)
+            exception.fulfill()
+        })
+        wait(for: [exception], timeout: 7)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
+
