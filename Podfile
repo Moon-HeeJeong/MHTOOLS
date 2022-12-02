@@ -7,6 +7,7 @@ use_frameworks!
 
 def available_pods
 pod 'Alamofire'
+pod 'RxSwift'
 end
 
 

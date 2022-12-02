@@ -83,6 +83,13 @@
 			remoteGlobalIDString = 303BAC67B549BB0935FD73E7723CC52F;
 			remoteInfo = "Pods-MHToolsTests";
 		};
+		D99C70552939835F00DC4A82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D967D4A32923650E004BF68F /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 809C5FAB588354C9BA37DC3EAB8CB45C;
+			remoteInfo = RxSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +281,7 @@
 				D967D4B32923650E004BF68F /* Pods-MHToolsEx */,
 				D967D4B72923650E004BF68F /* Pods-MHToolsExTests */,
 				D98D94A62924A06400161388 /* Pods-MHToolsTests */,
+				D99C70562939835F00DC4A82 /* RxSwift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -469,6 +477,14 @@
 			name = "Pods-MHToolsTests";
 			path = Pods_MHToolsTests.framework;
 			remoteRef = D98D94A52924A06400161388 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D99C70562939835F00DC4A82 /* RxSwift */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = RxSwift;
+			path = RxSwift.framework;
+			remoteRef = D99C70552939835F00DC4A82 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -861,7 +877,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -891,7 +907,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,9 +9,9 @@ import Foundation
 import Alamofire
 
 
-typealias Model_P = Decodable
+public typealias Model_P = Decodable
 
-protocol MH_APIInfo{
+public protocol MH_APIInfo{
     associatedtype DataType: Model_P
     
     var short: String {get}
@@ -25,12 +25,12 @@ extension MH_APIInfo{
         (self.config?.baseURL ?? "") + self.short
     }
 }
-protocol MH_APIConfig{
+public protocol MH_APIConfig{
     var headers: HTTPHeaders?{get}
     var baseURL: String{get}
 }
 
-struct MH_Response<DataType: Model_P>: Model_P{
+public struct MH_Response<DataType: Model_P>: Model_P{
     var responseType: Bool
     var data: DataType?
     
@@ -48,7 +48,7 @@ struct MH_Response<DataType: Model_P>: Model_P{
 }
 
 
-protocol MH_API: AnyObject{
+public protocol MH_API: AnyObject{
 }
 
 extension MH_API{
