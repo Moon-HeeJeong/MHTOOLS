@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-
+import RxSwift
 
 public typealias Model_P = Decodable
 
@@ -19,7 +19,7 @@ public protocol MH_APIInfo{
     var parameters: Parameters? {get}
     var config: MH_APIConfig? {get set}
 }
-extension MH_APIInfo{
+public extension MH_APIInfo{
   
     var address: String{
         (self.config?.baseURL ?? "") + self.short
@@ -51,7 +51,8 @@ public struct MH_Response<DataType: Model_P>: Model_P{
 public protocol MH_API: AnyObject{
 }
 
-extension MH_API{
+public extension MH_API{
+    
     func call<T: MH_APIInfo>(api: T, completed: @escaping (MH_Response<T.DataType>?)->()){
         
         AF.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
@@ -65,6 +66,43 @@ extension MH_API{
             }else{
                 completed(nil)
             }
+        }
+    }
+    
+    func callByRx<T: MH_APIInfo>(_ api: T) -> Observable<MH_Response<T.DataType>> {
+        
+        let observable = Observable<MH_Response<T.DataType>>.create { observer in
+            let request = AF.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
+                if let data = res.value{
+                    do{
+                        let decodingData = try JSONDecoder().decode(MH_Response<T.DataType>.self, from: data)
+                        observer.onNext(decodingData)
+                    }catch{
+                        observer.onError(APICallError.decodingErr)
+                    }
+                }else{
+                    observer.onError(APICallError.noDataErr)
+                }
+                observer.onCompleted()
+            }
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+        return observable
+    }
+}
+
+enum APICallError: Error{
+    case decodingErr
+    case noDataErr
+    
+    var desc: String{
+        switch self {
+        case .decodingErr:
+            return "decoding error"
+        case .noDataErr:
+            return "no data error"
         }
     }
 }

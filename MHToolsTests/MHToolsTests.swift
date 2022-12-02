@@ -33,5 +33,28 @@ final class MHToolsTests: XCTestCase {
         })
         wait(for: [exception], timeout: 7)
     }
+    
+    func testAPIByRx() throws{
+        let exception = self.expectation(description: "test api by rx call")
+        
+        var result: MH_Response<VersionAPI.DataType>?
+        
+        self.api?.callByRx(VersionAPI(deviceID: "7a16fd01-06a7-4395-bab0-30339d886541", pushID: "1dcf0c21fb5f7891f73eaba0266e87ac3871884ae6fc3456e4580007fbad8427", isPushOn: nil, config: APIConfig()))
+            .subscribe(
+                onNext: { element in
+                    print("res ::\(element)")
+                    result = element
+                    XCTAssertNotNil(result)
+                    exception.fulfill()
+                }, onError: { error in
+                    print("error ::\((error as? APICallError)?.desc)")
+                }, onCompleted: {
+                    print("completed")
+            }, onDisposed: {
+                print("disposed")
+            }
+            )
+        wait(for: [exception], timeout: 7)
+    }
 }
 
