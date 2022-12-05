@@ -14,6 +14,7 @@ import Alamofire
 struct VersionAPI: MH_APIInfo{
     
     typealias DataType = VersionInfo
+    typealias ResponseType = APIResponse<DataType>
     
     var config: MH_APIConfig?
     
@@ -45,6 +46,31 @@ struct VersionAPI: MH_APIInfo{
         self.pushID = pushID
         self.isPushOn = isPushOn
         self.config = config
+    }
+}
+struct APIResponse<DataType: Model_P>: Response_P{
+    
+    var responseType: ResponseType
+    var data: DataType?
+    
+    enum CodingKeys: CodingKey{
+        case data
+        case status
+        case message
+    }
+
+    public init(from decoder: Decoder) throws{
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let status = try container.decode(Int.self, forKey: .status)
+        let message = try? container.decode(String.self, forKey: .message)
+        
+        self.responseType = status == 200 ? .ok(message: message) : .error(code: status, message: message)
+        self.data = try? container.decode(DataType.self, forKey: .data)
+    }
+    
+    init(responseType: ResponseType, data: DataType?){
+        self.responseType = responseType
+        self.data = data
     }
 }
 
