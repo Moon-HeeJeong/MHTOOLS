@@ -78,7 +78,7 @@ class APIConfig: MH_APIConfig{
     var headers: HTTPHeaders?{
         return [
             "api-user-agent" : "LF_APP_iOS:phone/2.7.0/iPhone13,4/iOS:16.0",
-            "Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpcy5saXR0bGVmb3guY29tXC9hcGlcL3YxXC9hdXRoXC9jaGFuZ2UiLCJpYXQiOjE2Njk3NjY1NDAsImV4cCI6MTY3MjM1ODU0MCwibmJmIjoxNjY5NzY2NTQwLCJqdGkiOiI3akJNUk1sNFFyOVVFS3FVIiwic3ViIjoiVTIwMjIxMDI2MTExOTgxMTg1OCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJhdXRoX2tleSI6IjE3MDkzMDAyNjEyMDg1NiIsImN1cnJlbnRfdXNlcl9pZCI6IlUyMDIyMTAyNjExMTk4MTE4NTgiLCJleHBpcmVfZGF0ZSI6MTY5ODg5MTY1M30.s1skHQpzToso8AbAFUtrB-48AUtM22IHPP44QAmsxPLOso08jjJsjbDP6act8z3M-rZiLVUlw9Xy28Dd9gJIWw",
+            "Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpcy5saXR0bGVmb3guY29tXC9hcGlcL3YxXC9hdXRoXC9tZSIsImlhdCI6MTY3MDI4ODE4NywiZXhwIjoxNjcyODgwMTg3LCJuYmYiOjE2NzAyODgxODcsImp0aSI6InFRVzVNWXpvSzM5QUY1a1YiLCJzdWIiOiJVMjAyMjEwMjYxMTE5ODExODU4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsImF1dGhfa2V5IjoiMTcwOTMwMDI2MTIwODU2IiwiY3VycmVudF91c2VyX2lkIjoiVTIwMjIxMDI2MTExOTgxMTg1OCIsImV4cGlyZV9kYXRlIjoxNjk4ODkxNjUzfQ.TyXN7_NcTUmW1tmnv8uYAX5dUekiRUwdkqH_ktr5BWYY4h8lXcr9qpABeHjpm6oCRwc0uNY2AhJlGiS5NdhDkg",
             "api-locale" : "ko"
         ]
     }
@@ -88,6 +88,26 @@ class APIConfig: MH_APIConfig{
 }
 
 class APITest: MH_API{
+    
+    var sessionConfig: URLSessionConfiguration? = {
+        nil
+    }()
+
+    var trustManager: ServerTrustManager? = {
+        nil
+    }()
+    
+    lazy var session: Session = {
+        if let cofig = self.sessionConfig{
+            if let manager = self.trustManager{
+                return Session(configuration: cofig, serverTrustManager: manager)
+            }else{
+                return Session(configuration: cofig)
+            }
+        }else{
+            return Session()
+        }
+    }()
 }
 
 

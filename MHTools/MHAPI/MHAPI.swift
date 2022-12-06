@@ -58,13 +58,17 @@ public enum ResponseType{
 }
 
 public protocol MH_API: AnyObject{
+    
+    var session: Session{get set}
+    var trustManager: ServerTrustManager? {get set}
+    var sessionConfig: URLSessionConfiguration?{get set}
 }
 
 public extension MH_API{
     
     func call<T: MH_APIInfo>(api: T, completed: @escaping (T.ResponseType)->()){
-
-        AF.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
+        
+        self.session.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
             if let data = res.value{
                 do{
                     let decodingData = try JSONDecoder().decode(T.ResponseType.self, from: data)
@@ -82,7 +86,7 @@ public extension MH_API{
         
         return Observable<R>.create { observer in
             
-            let request = AF.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
+            let request = self.session.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
                 switch res.result{
                 case .success(_):
                     if let data = res.value{
