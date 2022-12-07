@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "MHAPI"
-  spec.version      = "1.0.4"
-  spec.summary      = "MHAPI helps API connect"
+  spec.name         = "MHTools"
+  spec.version      = "1.0.5"
+  spec.summary      = "MHTools helps your coding"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -92,8 +92,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MHTools/MHAPI/**/*"
-  spec.exclude_files = "MHAPI/Exclude"
+  spec.source_files  = "MHTools/**/*"
+  spec.exclude_files = "MHTools/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 

@@ -28,7 +28,8 @@ final class MHToolsTests: XCTestCase {
         
         self.api?.call(api: VersionAPI(deviceID: "7a16fd01-06a7-4395-bab0-30339d886541", pushID: "1dcf0c21fb5f7891f73eaba0266e87ac3871884ae6fc3456e4580007fbad8427", isPushOn: nil, config: APIConfig()), completed: { res in
             print("res ::\(res)")
-            XCTAssertNotNil(res)
+//            XCTAssertNotNil(res)
+            XCTAssertNil(res.data)
             exception.fulfill()
         })
         wait(for: [exception], timeout: 7)
@@ -44,7 +45,8 @@ final class MHToolsTests: XCTestCase {
                 onNext: { element in
                     print("res ::\(element)")
 //                    result = element
-                    XCTAssertNotNil(element)
+//                    XCTAssertNotNil(element)
+                    XCTAssertNil(element.data)
                     exception.fulfill()
                 }, onError: { error in
                     print("error ::\((error as? APICallError)?.desc)")

@@ -69,15 +69,26 @@ public extension MH_API{
     func call<T: MH_APIInfo>(api: T, completed: @escaping (T.ResponseType)->()){
         
         self.session.request(URL(string: api.address)!, method: api.method, parameters: api.parameters, headers: api.config?.headers).responseData { res in
-            if let data = res.value{
-                do{
-                    let decodingData = try JSONDecoder().decode(T.ResponseType.self, from: data)
-                    completed(decodingData)
-                }catch(let e){
-                    completed(T.ResponseType(responseType: .error(code: -1, message: e.localizedDescription), data: nil))
+            switch res.result{
+            case .success(_):
+                if let data = res.value{
+                    do{
+                        let decodingData = try JSONDecoder().decode(T.ResponseType.self, from: data)
+                        if let _ = decodingData.data{
+                            completed(decodingData)
+                        }else{
+                            completed(T.ResponseType(responseType: .error(code: -1, message: "decoding error"), data: nil))
+                        }
+                    }catch(let e){
+                        completed(T.ResponseType(responseType: .error(code: e.asAFError?.responseCode ?? -1, message: e.localizedDescription), data: nil))
+                    }
+                }else{
+                    completed(T.ResponseType(responseType: .error(code: res.error?.responseCode ?? -1, message: res.error?.localizedDescription), data: nil))
                 }
-            }else{
-                completed(T.ResponseType(responseType: .error(code: -1, message: res.error?.localizedDescription), data: nil))
+                break
+            case .failure(_):
+                completed(T.ResponseType(responseType: .error(code: res.error?.responseCode ?? -1, message: res.error?.localizedDescription), data: nil))
+                break
             }
         }
     }
@@ -92,8 +103,11 @@ public extension MH_API{
                     if let data = res.value{
                         do{
                             let decodingData = try JSONDecoder().decode(R.self, from: data)
-                            observer.onNext(decodingData)
-                            
+                            if let _ = decodingData.data{
+                                observer.onNext(decodingData)
+                            }else{
+                                observer.onError(APICallError.decodingErr(code: -1, message: "decoding error"))
+                            }
                         }catch(let e){
                             observer.onError(APICallError.decodingErr(code: e.asAFError?.responseCode ?? -1, message: e.localizedDescription))
                         }
@@ -102,7 +116,7 @@ public extension MH_API{
                     }
                     break
                 case .failure(_):
-                    observer.onError(APICallError.networkingErr(code: -1, message: res.error?.localizedDescription))
+                    observer.onError(APICallError.networkingErr(code: res.error?.responseCode ?? -1, message: res.error?.localizedDescription))
                     break
                 }
                 observer.onCompleted()

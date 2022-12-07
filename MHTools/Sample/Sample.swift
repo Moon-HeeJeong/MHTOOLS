@@ -113,7 +113,7 @@ class APITest: MH_API{
 
 public struct VersionInfo: Model_P{
     static let DefaultMinSupportVerserion: Int = 9
-    let installed_version: String
+    let installed_version: Int
     let latest_version: String
     let store_url: String
     let is_installed_latest: Bool
