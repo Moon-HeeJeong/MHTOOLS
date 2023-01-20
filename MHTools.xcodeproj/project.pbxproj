@@ -26,6 +26,12 @@
 		D967D49F292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
 		D967D4A0292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
 		D967D4A1292353A7004BF68F /* MHAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D967D49D292353A7004BF68F /* MHAPI.swift */; };
+		D98AE40729776965005816FB /* MH_APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE40629776965005816FB /* MH_APIInfo.swift */; };
+		D98AE40829776965005816FB /* MH_APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE40629776965005816FB /* MH_APIInfo.swift */; };
+		D98AE410297769F4005816FB /* MH_APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE40F297769F4005816FB /* MH_APIConfig.swift */; };
+		D98AE411297769F4005816FB /* MH_APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE40F297769F4005816FB /* MH_APIConfig.swift */; };
+		D98AE41329776A28005816FB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE41229776A28005816FB /* Response.swift */; };
+		D98AE41429776A28005816FB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98AE41229776A28005816FB /* Response.swift */; };
 		D98D94A82924A39400161388 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; fileRef = D967D4AD2923650E004BF68F /* Alamofire */; };
 		D98D94B22924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
 		D98D94B32924A74600161388 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D94B12924A74600161388 /* Sample.swift */; };
@@ -125,6 +131,9 @@
 		D967D48529234F38004BF68F /* MHToolsExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHToolsExTests.swift; sourceTree = "<group>"; };
 		D967D49D292353A7004BF68F /* MHAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAPI.swift; sourceTree = "<group>"; };
 		D967D4A32923650E004BF68F /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		D98AE40629776965005816FB /* MH_APIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH_APIInfo.swift; sourceTree = "<group>"; };
+		D98AE40F297769F4005816FB /* MH_APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MH_APIConfig.swift; sourceTree = "<group>"; };
+		D98AE41229776A28005816FB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		D98D94B12924A74600161388 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		E4353E17BD8A88CA6DADEA03 /* Pods-MHToolsExTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MHToolsExTests.release.xcconfig"; path = "Target Support Files/Pods-MHToolsExTests/Pods-MHToolsExTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7679C530EA2EA769F9A73F2 /* Pods_MHToolsEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MHToolsEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +278,9 @@
 			isa = PBXGroup;
 			children = (
 				D967D49D292353A7004BF68F /* MHAPI.swift */,
+				D98AE40629776965005816FB /* MH_APIInfo.swift */,
+				D98AE40F297769F4005816FB /* MH_APIConfig.swift */,
+				D98AE41229776A28005816FB /* Response.swift */,
 			);
 			path = MHAPI;
 			sourceTree = "<group>";
@@ -671,7 +683,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D967D42529234E51004BF68F /* MHTools.docc in Sources */,
+				D98AE410297769F4005816FB /* MH_APIConfig.swift in Sources */,
+				D98AE40729776965005816FB /* MH_APIInfo.swift in Sources */,
 				D98D94B22924A74600161388 /* Sample.swift in Sources */,
+				D98AE41329776A28005816FB /* Response.swift in Sources */,
 				D967D49E292353A7004BF68F /* MHAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -681,7 +696,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D967D43029234E52004BF68F /* MHToolsTests.swift in Sources */,
+				D98AE411297769F4005816FB /* MH_APIConfig.swift in Sources */,
+				D98AE40829776965005816FB /* MH_APIInfo.swift in Sources */,
 				D98D94B32924A74600161388 /* Sample.swift in Sources */,
+				D98AE41429776A28005816FB /* Response.swift in Sources */,
 				D967D49F292353A7004BF68F /* MHAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

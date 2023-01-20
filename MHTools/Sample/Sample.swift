@@ -78,7 +78,7 @@ class APIConfig: MH_APIConfig{
     var headers: HTTPHeaders?{
         return [
             "api-user-agent" : "LF_APP_iOS:phone/2.7.0/iPhone13,4/iOS:16.0",
-            "Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpcy5saXR0bGVmb3guY29tXC9hcGlcL3YxXC9hdXRoXC9tZSIsImlhdCI6MTY3MDI4ODE4NywiZXhwIjoxNjcyODgwMTg3LCJuYmYiOjE2NzAyODgxODcsImp0aSI6InFRVzVNWXpvSzM5QUY1a1YiLCJzdWIiOiJVMjAyMjEwMjYxMTE5ODExODU4IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsImF1dGhfa2V5IjoiMTcwOTMwMDI2MTIwODU2IiwiY3VycmVudF91c2VyX2lkIjoiVTIwMjIxMDI2MTExOTgxMTg1OCIsImV4cGlyZV9kYXRlIjoxNjk4ODkxNjUzfQ.TyXN7_NcTUmW1tmnv8uYAX5dUekiRUwdkqH_ktr5BWYY4h8lXcr9qpABeHjpm6oCRwc0uNY2AhJlGiS5NdhDkg",
+            "Authorization" : "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJodHRwczpcL1wvYXBpcy5saXR0bGVmb3guY29tXC9hcGlcL3YxXC9hdXRoXC9jaGFuZ2UiLCJpYXQiOjE2NzE2MDI1MzMsImV4cCI6MTY3NDE5NDUzMywibmJmIjoxNjcxNjAyNTMzLCJqdGkiOiJJYmpSRXU3c0ZySE85QmlKIiwic3ViIjoiVTIwMjExMDE4MTEwNTc2NTc2NSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJhdXRoX2tleSI6IjA5MTUyMTAyODk1NDkyNSIsImN1cnJlbnRfdXNlcl9pZCI6IlUyMDIxMTAxODExMDU3NjU3NjUiLCJleHBpcmVfZGF0ZSI6MTY3Mzc0NTk4Mn0.gN6k1nqQG93ViA2yr--YdW2W4GxAOe--By145hALqQ9w5axodTLmJMGDHnWlhTfpp8d8U6dpIqrkITRDYkzB7g",
             "api-locale" : "ko"
         ]
     }
@@ -98,22 +98,23 @@ class APITest: MH_API{
     }()
     
     lazy var session: Session = {
-        if let cofig = self.sessionConfig{
-            if let manager = self.trustManager{
-                return Session(configuration: cofig, serverTrustManager: manager)
-            }else{
-                return Session(configuration: cofig)
-            }
-        }else{
-            return Session()
-        }
+//        if let cofig = self.sessionConfig{
+//            if let manager = self.trustManager{
+//                return Session(configuration: cofig, serverTrustManager: manager)
+//            }else{
+//                return Session(configuration: cofig)
+//            }
+//        }else{
+//            return Session()
+//        }
+        Session()
     }()
 }
 
 
 public struct VersionInfo: Model_P{
     static let DefaultMinSupportVerserion: Int = 9
-    let installed_version: Int
+    let installed_version: String//Int
     let latest_version: String
     let store_url: String
     let is_installed_latest: Bool
